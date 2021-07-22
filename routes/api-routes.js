@@ -40,7 +40,7 @@ router.post("api/workouts", async ({body},res)=>{
 })
 
 //Update workout
-router.put("api/workout/:id",async ({body,params},res)=>{
+router.put("api/workouts/:id",async ({body,params},res)=>{
     try{
         db.findByIdAndUpdate(params.id,{$push:{exercise:body}})
         .then((dbData)=>{
